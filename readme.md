@@ -66,7 +66,7 @@ The Musically App is designed to provide users with a comprehensive music playli
     <td>Detailed View Screen</td>
   </tr>
   <tr>
-    <td><img src="DisplayList.png" alt="Detailed View Screen" width="300" style="border: 2px solid #ddd; padding: 5px; border-radius: 4px; display: block; margin-left: auto; margin-right: auto;"/></td>
+    <td><img src="ListofSongs.png" alt="Detailed View Screen" width="300" style="border: 2px solid #ddd; padding: 5px; border-radius: 4px; display: block; margin-left: auto; margin-right: auto;"/></td>
   </tr>
 </table>
 
