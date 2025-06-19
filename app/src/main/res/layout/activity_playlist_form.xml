@@ -60,20 +60,7 @@
                 android:layout_width="230dp"
                 android:layout_height="match_parent">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
 
-                    <ImageView
-                        android:id="@+id/imageView8"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/baseline_beach_access_24" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
             </FrameLayout>
 
         </LinearLayout>
@@ -88,7 +75,7 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="410dp">
+        android:layout_height="420dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -100,7 +87,7 @@
                 android:layout_height="42dp">
 
                 <TextView
-                    android:id="@+id/nameOfCity"
+                    android:id="@+id/title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
@@ -117,7 +104,7 @@
                 android:layout_height="match_parent">
 
                 <EditText
-                    android:id="@+id/editTextNumberHighTemp"
+                    android:id="@+id/editTextQuestion1"
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
@@ -128,10 +115,10 @@
                     android:textSize="18dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textHighTemp" />
+                    app:layout_constraintTop_toBottomOf="@+id/textQestion1" />
 
                 <TextView
-                    android:id="@+id/textHighTemp"
+                    android:id="@+id/textQestion1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
@@ -139,11 +126,12 @@
                     android:text="Name Of The Song:"
                     android:textSize="18dp"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textLowTemp"
+                    android:id="@+id/textQestion2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
@@ -153,10 +141,10 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.501"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextNumberHighTemp" />
+                    app:layout_constraintTop_toBottomOf="@+id/editTextQuestion1" />
 
                 <TextView
-                    android:id="@+id/textCondition"
+                    android:id="@+id/textQestion3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
@@ -164,12 +152,11 @@
                     android:text="Rating of of 5:"
                     android:textSize="18dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.495"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextNumberLowTemp" />
+                    app:layout_constraintTop_toBottomOf="@+id/editTextQuestion2" />
 
                 <EditText
-                    android:id="@+id/editTextNumberLowTemp"
+                    android:id="@+id/editTextQuestion2"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
@@ -181,36 +168,44 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.501"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textLowTemp" />
+                    app:layout_constraintTop_toBottomOf="@+id/textQestion2" />
 
                 <Spinner
-                    android:id="@+id/spinnerCondition"
+                    android:id="@+id/spinnerQuestion3"
                     android:layout_width="190dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.533"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textCondition" />
+                    app:layout_constraintTop_toBottomOf="@+id/textQestion3" />
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/textQestion4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="sans-serif-light"
                     android:text="Comment:"
-                    tools:layout_editor_absoluteX="166dp"
-                    tools:layout_editor_absoluteY="294dp" />
+                    android:textSize="18dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.466"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinnerQuestion3" />
 
                 <EditText
-                    android:id="@+id/editTextText2"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/editTextQuestion4"
+                    android:layout_width="290dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
                     android:ems="10"
                     android:hint="Lovely and charming"
                     android:inputType="text"
                     android:textAlignment="center"
-                    android:textSize="18dp"
-                    tools:layout_editor_absoluteX="98dp"
-                    tools:layout_editor_absoluteY="323dp" />
+                    android:textSize="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textQestion4" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>

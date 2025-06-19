@@ -10,7 +10,7 @@ import za.co.varsitycollege.musically.databinding.ActivityMainBinding
 import java.io.Serializable
 import java.util.Arrays
 
-var databasePlaylist = ArrayList<MainActivity.DBSong>()
+var dbPlaylist = ArrayList<MainActivity.DBSong>()
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,49 +26,59 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+
 
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
 
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+//        setContentView(R.layout.activity_main)
 
-//        getSongs()
+        // Enable edge-to-edge display for modern Android UI
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { view, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            view.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            WindowInsetsCompat.CONSUMED
+        }
+
+        getSongs()
+
+        binding.addPlaylistButton.setOnClickListener{
+            // Navigate to the Dashboard activity
+            val intent = Intent(this, PlaylistFormActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.navigateDetailedActButton.setOnClickListener {
+            // Navigate to the Dashboard activity
+            val intent = Intent(this, DetailedActivity::class.java)
+            startActivity(intent)
+        }
         binding.closeButton.setOnClickListener {finish()}
-//        binding.addPlaylistButton.setOnClickListener{
-//            // Navigate to the Dashboard activity
-//            val intent = Intent(this, Dashboard::class.java)
-//            startActivity(intent)
-//        }
-//        binding.Head2MainPage.setOnClickListener {
-//            // Navigate to the Dashboard activity
-//            val intent = Intent(this, Dashboard::class.java)
-//            startActivity(intent)
-//        }
 
     }
 
     private fun getSongs() {
-        databasePlaylist.add(DBSong(
+        dbPlaylist.add(DBSong(
             songTitle = "Song 1",
             nameArtist = "Artist 1",
             rate = 5,
             comment = "Great song!"
         ))
-        databasePlaylist.add(DBSong(
+        dbPlaylist.add(DBSong(
             songTitle = "Song 2",
             nameArtist = "Artist 2",
             rate = 4,
             comment = "Nice beat!"
         ))
-        databasePlaylist.add(DBSong(
+        dbPlaylist.add(DBSong(
             songTitle = "Song 3",
             nameArtist = "Artist 3",
             rate = 3,
             comment = "Good rhythm!"
         ))
-        databasePlaylist.add(DBSong(
+        dbPlaylist.add(DBSong(
             songTitle = "Song 4",
             nameArtist = "Artist 4",
             rate = 2,
