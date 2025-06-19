@@ -10,13 +10,14 @@ import za.co.varsitycollege.musically.databinding.ActivityMainBinding
 import java.io.Serializable
 import java.util.Arrays
 
+// Database to store the playlist songs
 var dbPlaylist = ArrayList<MainActivity.DBSong>()
 
 class MainActivity : AppCompatActivity() {
 
     // ViewBinding instance for the dashboard layout.
     lateinit var binding: ActivityMainBinding
-
+    // Data class to represent a song in the playlist
     data class DBSong(
         val songTitle: String,
         val nameArtist: String,
@@ -43,22 +44,25 @@ class MainActivity : AppCompatActivity() {
         }
 
         getSongs()
-
+        // Navigate to the Playlist activity
         binding.addPlaylistButton.setOnClickListener{
             // Navigate to the Dashboard activity
             val intent = Intent(this, PlaylistFormActivity::class.java)
             startActivity(intent)
         }
-
+        // Navigate to the Detailed activity
         binding.navigateDetailedActButton.setOnClickListener {
             // Navigate to the Dashboard activity
             val intent = Intent(this, DetailedActivity::class.java)
             startActivity(intent)
         }
-        binding.closeButton.setOnClickListener {finish()}
+        // Close button to finish the activity
+        binding.closeButton.setOnClickListener {
+            finish()
+        }
 
     }
-
+    // Function to get the average rating of all songs in the playlist
     private fun getSongs() {
         dbPlaylist.add(DBSong(
             songTitle = "Song 1",

@@ -25,7 +25,6 @@ class DetailedActivity : AppCompatActivity() {
         enableEdgeToEdge()
         binding = ActivityDetailedBinding.inflate(layoutInflater)
         setContentView(binding.root)
-//        setContentView(R.layout.activity_detailed)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -129,7 +128,7 @@ class DetailedActivity : AppCompatActivity() {
         }
 
     }
-
+    // Function to get the view ID based on a prefix and index
     private fun getViewId(prefix: String, index: Int): Int {
         val resourceName = "${prefix}${index}"
         val id = resources.getIdentifier(resourceName, "id", packageName)
