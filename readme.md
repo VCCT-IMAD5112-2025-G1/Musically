@@ -11,9 +11,8 @@ This App is Made By Mazen Ba Hamid | ST10486439
 2.  [🔗 GitHub Repository Link](#-github-repository-link)
 3.  [📝 Application Purpose](#-application-purpose)
 4.  [✨ Core Features](#-core-features)
-5.  [🧠 Design and Logic (Pseudocode)](#-design-and-logic-pseudocode)
-6.  [📸 Application Screenshots](#-application-screenshots)
-7.  [🛠️ Technology Stack](#-technology-stack)
+5.  [📸 Application Screenshots](#-application-screenshots)
+6.  [🛠️ Technology Stack](#-technology-stack)
 
 ---
 
@@ -26,7 +25,7 @@ This App is Made By Mazen Ba Hamid | ST10486439
 ### **🔗 GitHub Repository Link**
 
 The complete source code for this project is available on GitHub:
-[https://github.com/x0Mazen/Musically](https://github.com/your-username/Musically)
+[https://github.com/x0Mazen/Musically]https://github.com/x0Mazen/Musically)
 
 ---
 
