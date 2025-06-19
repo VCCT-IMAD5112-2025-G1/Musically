@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DAE2E9"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/closeButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="30dp"
+            android:clickable="true"
+            android:src="@drawable/baseline_circle_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#FFFFFF" />
+
+        <ImageView
+            android:id="@+id/addPlaylistButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="30dp"
+            android:clickable="true"
+            android:src="@drawable/baseline_circle_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#FFFFFF" />
+
+        <ImageView
+            android:id="@+id/iconAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="45"
+            android:src="@drawable/baseline_close_24"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/addPlaylistButton"
+            app:layout_constraintEnd_toEndOf="@+id/addPlaylistButton"
+            app:layout_constraintStart_toStartOf="@+id/addPlaylistButton"
+            app:layout_constraintTop_toTopOf="@+id/addPlaylistButton"
+            app:tint="#595757" />
+
+        <ImageView
+            android:id="@+id/iconCloseArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_close_24"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/closeButton"
+            app:layout_constraintEnd_toEndOf="@+id/closeButton"
+            app:layout_constraintStart_toStartOf="@+id/closeButton"
+            app:layout_constraintTop_toTopOf="@+id/closeButton"
+            app:tint="#595757" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/baseline_close_24"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="367dp"
+            android:layout_height="337dp"
+            android:src="@drawable/character_people_listening_to_music_png"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+
+            android:id="@+id/circle"
+            android:layout_width="700dp"
+            android:layout_height="700dp"
+            android:layout_marginTop="400dp"
+            android:src="@drawable/baseline_circle_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#FAF6F6" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Welcome\nto Musically"
+            android:textAlignment="center"
+            android:textColor="#388FEF"
+            android:textSize="35dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/circle" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="365dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="20dp"
+            android:text="Track your lovely playlist, and stay informed about changing conditions. Ready to explore?\n\nMade by: Mazen BaHamid | ST10486439"
+            android:textColor="#585858"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <Button
+            android:id="@+id/Head2MainPage"
+            android:layout_width="353dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#106ED5"
+            android:hapticFeedbackEnabled="false"
+            android:text="Get Started"
+
+            android:textColor="#faf4fc"
+            android:textSize="20dp"
+            app:cornerRadius="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
