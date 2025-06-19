@@ -1,0 +1,1701 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DAE2E9"
+    android:orientation="vertical"
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".DetailedActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp">
+            <!-- You can keep your header here if needed -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/backButton"
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:clickable="true">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/iconBackCircleBG"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/baseline_circle_24"
+                            app:tint="#FFFFFF" />
+
+                        <ImageView
+                            android:id="@+id/iconBackArrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:rotationY="-180"
+                            app:layout_constraintBottom_toBottomOf="@+id/iconBackCircleBG"
+                            app:layout_constraintEnd_toEndOf="@+id/iconBackCircleBG"
+                            app:layout_constraintStart_toStartOf="@+id/iconBackCircleBG"
+                            app:layout_constraintTop_toTopOf="@+id/iconBackCircleBG"
+                            app:srcCompat="@drawable/baseline_home_24"
+                            app:tint="#595757" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </FrameLayout>
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Card 1 -->
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/avgCard"
+                        android:layout_width="350dp"
+                        android:layout_height="80dp"
+                        android:clickable="true"
+                        app:cardCornerRadius="25dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="96dp"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/bgIconavg"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_circle_24"
+                                        app:tint="#EFF2F6FF"
+                                        tools:ignore="ContentDescription" />
+
+                                    <ImageView
+                                        android:id="@+id/iconAvg"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:tint="#106ED5"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_calculate_24"
+                                        tools:ignore="ContentDescription" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="158dp"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/textGetAvg"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5dp"
+                                        android:fontFamily="sans-serif-medium"
+                                        android:text="Get The Avg Rates"
+                                        android:textSize="18sp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textCheckoutAvg"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:text="Check it out >"
+                                        android:textColor="#828282"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textGetAvg" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/textAvg"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif-medium"
+                                        android:textSize="20sp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </FrameLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/songsCard"
+                        android:layout_width="350dp"
+                        android:layout_height="80dp"
+                        app:cardCornerRadius="25dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="96dp"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/bgIconDay1"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_circle_24"
+                                        app:tint="#EFF2F6FF"
+                                        tools:ignore="ContentDescription" />
+
+                                    <ImageView
+                                        android:id="@+id/iconDay1"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:tint="#106ED5"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_library_music_24"
+                                        tools:ignore="ContentDescription" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="158dp"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/nameOfDay1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5dp"
+                                        android:fontFamily="sans-serif-medium"
+                                        android:text="List of The Songs"
+                                        android:textSize="18sp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/tempLow1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="5dp"
+                                        android:text="Check Out it >"
+                                        android:textColor="#828282"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </FrameLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Card 2 -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/songCard1"
+                        android:layout_width="350dp"
+                        android:layout_height="80dp"
+                        android:visibility="invisible"
+                        app:cardCornerRadius="25dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="96dp"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/bgIconSong1"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_circle_24"
+                                        app:tint="#EFF2F6FF"
+                                        tools:ignore="ContentDescription" />
+
+                                    <ImageView
+                                        android:id="@+id/iconSong1"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:tint="#106ED5"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_music_note_24"
+                                        tools:ignore="ContentDescription" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/textHighlightNameSong1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Song Title:"
+                                        android:textColor="#828282"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textSongName1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Water"
+                                        android:textColor="#000000"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toEndOf="@+id/textHighlightNameSong1"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textHighlishArtistName1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Name Of The Artist:"
+                                        android:textColor="#828282"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textHighlightNameSong1" />
+
+                                    <TextView
+                                        android:id="@+id/textArtistName1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Tayla"
+                                        android:textColor="#000000"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toEndOf="@+id/textHighlishArtistName1"
+                                        app:layout_constraintTop_toBottomOf="@+id/textSongName1" />
+
+                                    <TextView
+                                        android:id="@+id/textHighlishComment1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Comment:"
+                                        android:textColor="#828282"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textHighlishArtistName1" />
+
+                                    <TextView
+                                        android:id="@+id/textComment1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="6dp"
+                                        android:layout_marginTop="8dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Good Song"
+                                        android:textColor="#000000"
+                                        android:textSize="12sp"
+                                        app:layout_constraintStart_toEndOf="@+id/textHighlishComment1"
+                                        app:layout_constraintTop_toBottomOf="@+id/textArtistName1" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar1Box1"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar2Box1"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toStartOf="@+id/iconStar1Box1"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar3Box1"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toStartOf="@+id/iconStar2Box1"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar4Box1"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toStartOf="@+id/iconStar3Box1"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar5Box1"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toStartOf="@+id/iconStar4Box1"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </FrameLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Card 3 -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/songCard2"
+                        android:layout_width="350dp"
+                        android:layout_height="80dp"
+                        android:visibility="invisible"
+                        app:cardCornerRadius="25dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="96dp"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/bgIconSong2"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_circle_24"
+                                        app:tint="#EFF2F6FF" />
+
+                                    <ImageView
+                                        android:id="@+id/iconSong2"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_music_note_24"
+                                        app:tint="#106ED5" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/textHighlightNameSong2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Song Title:"
+                                        android:textColor="#828282"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textSongName2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Water"
+                                        android:textColor="#000000"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toEndOf="@+id/textHighlightNameSong2"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textHighlishArtistName2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Name Of The Artist:"
+                                        android:textColor="#828282"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textHighlightNameSong2" />
+
+                                    <TextView
+                                        android:id="@+id/textArtistName2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Tayla"
+                                        android:textColor="#000000"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toEndOf="@+id/textHighlishArtistName2"
+                                        app:layout_constraintTop_toBottomOf="@+id/textSongName2" />
+
+                                    <TextView
+                                        android:id="@+id/textHighlishComment2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Comment:"
+                                        android:textColor="#828282"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textHighlishArtistName2" />
+
+                                    <TextView
+                                        android:id="@+id/textComment2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="6dp"
+                                        android:layout_marginTop="8dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Good Song"
+                                        android:textColor="#000000"
+                                        android:textSize="12sp"
+                                        app:layout_constraintStart_toEndOf="@+id/textHighlishComment2"
+                                        app:layout_constraintTop_toBottomOf="@+id/textArtistName2" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar1Box2"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar2Box2"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toStartOf="@+id/iconStar1Box2"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar3Box2"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toStartOf="@+id/iconStar2Box2"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar4Box2"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toStartOf="@+id/iconStar3Box2"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar5Box2"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toStartOf="@+id/iconStar4Box2"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </FrameLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Card 4 -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/songCard3"
+                        android:layout_width="350dp"
+                        android:layout_height="80dp"
+                        android:visibility="invisible"
+                        app:cardCornerRadius="25dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="96dp"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/bgIconSong3"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_circle_24"
+                                        app:tint="#EFF2F6FF" />
+
+                                    <ImageView
+                                        android:id="@+id/iconSong3"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:tint="#106ED5"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_music_note_24" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/textHighlightNameSong3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Song Title:"
+                                        android:textColor="#828282"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textSongName3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Water"
+                                        android:textColor="#000000"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toEndOf="@+id/textHighlightNameSong3"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textHighlishArtistName3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Name Of The Artist:"
+                                        android:textColor="#828282"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textHighlightNameSong3" />
+
+                                    <TextView
+                                        android:id="@+id/textArtistName3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Tayla"
+                                        android:textColor="#000000"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toEndOf="@+id/textHighlishArtistName3"
+                                        app:layout_constraintTop_toBottomOf="@+id/textSongName3" />
+
+                                    <TextView
+                                        android:id="@+id/textHighlishComment3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Comment:"
+                                        android:textColor="#828282"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textHighlishArtistName3" />
+
+                                    <TextView
+                                        android:id="@+id/textComment3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="6dp"
+                                        android:layout_marginTop="8dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Good Song"
+                                        android:textColor="#000000"
+                                        android:textSize="12sp"
+                                        app:layout_constraintStart_toEndOf="@+id/textHighlishComment3"
+                                        app:layout_constraintTop_toBottomOf="@+id/textArtistName3" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar1Box3"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar2Box3"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toStartOf="@+id/iconStar1Box3"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar3Box3"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toStartOf="@+id/iconStar2Box3"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar4Box3"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toStartOf="@+id/iconStar3Box3"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar5Box3"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toStartOf="@+id/iconStar4Box3"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </FrameLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Card 5 (Friday) -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/songCard4"
+                        android:layout_width="350dp"
+                        android:layout_height="80dp"
+                        android:visibility="invisible"
+                        app:cardCornerRadius="25dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="96dp"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/bgIconSong4"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_circle_24"
+                                        app:tint="#EFF2F6FF" />
+
+                                    <ImageView
+                                        android:id="@+id/iconSong4"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:tint="#106ED5"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_music_note_24" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/textHighlightNameSong4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Song Title:"
+                                        android:textColor="#828282"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textSongName4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Water"
+                                        android:textColor="#000000"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toEndOf="@+id/textHighlightNameSong4"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textHighlishArtistName4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Name Of The Artist:"
+                                        android:textColor="#828282"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textHighlightNameSong4" />
+
+                                    <TextView
+                                        android:id="@+id/textArtistName4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Tayla"
+                                        android:textColor="#000000"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toEndOf="@+id/textHighlishArtistName4"
+                                        app:layout_constraintTop_toBottomOf="@+id/textSongName4" />
+
+                                    <TextView
+                                        android:id="@+id/textHighlishComment4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Comment:"
+                                        android:textColor="#828282"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textHighlishArtistName4" />
+
+                                    <TextView
+                                        android:id="@+id/textComment4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="6dp"
+                                        android:layout_marginTop="8dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Good Song"
+                                        android:textColor="#000000"
+                                        android:textSize="12sp"
+                                        app:layout_constraintStart_toEndOf="@+id/textHighlishComment4"
+                                        app:layout_constraintTop_toBottomOf="@+id/textArtistName4" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar1Box4"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar2Box4"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toStartOf="@+id/iconStar1Box4"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar3Box4"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toStartOf="@+id/iconStar2Box4"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar4Box4"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toStartOf="@+id/iconStar3Box4"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar5Box4"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toStartOf="@+id/iconStar4Box4"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </FrameLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Card 6 (Saturday) -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/songCard5"
+                        android:layout_width="350dp"
+                        android:layout_height="80dp"
+                        android:visibility="invisible"
+                        app:cardCornerRadius="25dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="96dp"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/bgIconSong5"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_circle_24"
+                                        app:tint="#EFF2F6FF" />
+
+                                    <ImageView
+                                        android:id="@+id/iconSong5"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:tint="#106ED5"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_music_note_24" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/textHighlightNameSong5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Song Title:"
+                                        android:textColor="#828282"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textSongName5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Water"
+                                        android:textColor="#000000"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toEndOf="@+id/textHighlightNameSong5"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textHighlishArtistName5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Name Of The Artist:"
+                                        android:textColor="#828282"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textHighlightNameSong5" />
+
+                                    <TextView
+                                        android:id="@+id/textArtistName5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Tayla"
+                                        android:textColor="#000000"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toEndOf="@+id/textHighlishArtistName5"
+                                        app:layout_constraintTop_toBottomOf="@+id/textSongName5" />
+
+                                    <TextView
+                                        android:id="@+id/textHighlishComment5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Comment:"
+                                        android:textColor="#828282"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textHighlishArtistName5" />
+
+                                    <TextView
+                                        android:id="@+id/textComment5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="6dp"
+                                        android:layout_marginTop="8dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Good Song"
+                                        android:textColor="#000000"
+                                        android:textSize="12sp"
+                                        app:layout_constraintStart_toEndOf="@+id/textHighlishComment5"
+                                        app:layout_constraintTop_toBottomOf="@+id/textArtistName5" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar1Box5"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar2Box5"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toStartOf="@+id/iconStar1Box5"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar3Box5"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toStartOf="@+id/iconStar2Box5"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar4Box5"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toStartOf="@+id/iconStar3Box5"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar5Box5"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toStartOf="@+id/iconStar4Box5"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </FrameLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Card 7 (Sunday) -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/songCard6"
+                        android:layout_width="350dp"
+                        android:layout_height="80dp"
+                        android:visibility="invisible"
+                        app:cardCornerRadius="25dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="96dp"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/bgIconSong6"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_circle_24"
+                                        app:tint="#EFF2F6FF" />
+
+                                    <ImageView
+                                        android:id="@+id/iconSong6"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:tint="#106ED5"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_music_note_24" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/textHighlightNameSong6"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Song Title:"
+                                        android:textColor="#828282"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textSongName6"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Water"
+                                        android:textColor="#000000"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toEndOf="@+id/textHighlightNameSong6"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textHighlishArtistName6"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Name Of The Artist:"
+                                        android:textColor="#828282"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textHighlightNameSong6" />
+
+                                    <TextView
+                                        android:id="@+id/textArtistName6"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Tayla"
+                                        android:textColor="#000000"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toEndOf="@+id/textHighlishArtistName6"
+                                        app:layout_constraintTop_toBottomOf="@+id/textSongName6" />
+
+                                    <TextView
+                                        android:id="@+id/textHighlishComment6"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Comment:"
+                                        android:textColor="#828282"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textHighlishArtistName6" />
+
+                                    <TextView
+                                        android:id="@+id/textComment6"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="6dp"
+                                        android:layout_marginTop="8dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Good Song"
+                                        android:textColor="#000000"
+                                        android:textSize="12sp"
+                                        app:layout_constraintStart_toEndOf="@+id/textHighlishComment6"
+                                        app:layout_constraintTop_toBottomOf="@+id/textArtistName6" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar1Box6"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar2Box6"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toStartOf="@+id/iconStar1Box6"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar3Box6"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toStartOf="@+id/iconStar2Box6"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar4Box6"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toStartOf="@+id/iconStar3Box6"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar5Box6"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toStartOf="@+id/iconStar4Box6"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </FrameLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Card 8 (Extra) -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/songCard7"
+                        android:layout_width="350dp"
+                        android:layout_height="80dp"
+                        android:visibility="invisible"
+                        app:cardCornerRadius="25dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="96dp"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/bgIconSong7"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_circle_24"
+                                        app:tint="#EFF2F6FF" />
+
+                                    <ImageView
+                                        android:id="@+id/iconSong7"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:tint="#106ED5"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_music_note_24" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/textHighlightNameSong7"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Song Title:"
+                                        android:textColor="#828282"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textSongName7"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Water"
+                                        android:textColor="#000000"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toEndOf="@+id/textHighlightNameSong7"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textHighlishArtistName7"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Name Of The Artist:"
+                                        android:textColor="#828282"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textHighlightNameSong7" />
+
+                                    <TextView
+                                        android:id="@+id/textArtistName7"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Tayla"
+                                        android:textColor="#000000"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toEndOf="@+id/textHighlishArtistName7"
+                                        app:layout_constraintTop_toBottomOf="@+id/textSongName7" />
+
+                                    <TextView
+                                        android:id="@+id/textHighlishComment7"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Comment:"
+                                        android:textColor="#828282"
+                                        android:textSize="15sp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textHighlishArtistName7" />
+
+                                    <TextView
+                                        android:id="@+id/textComment7"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="6dp"
+                                        android:layout_marginTop="8dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Good Song"
+                                        android:textColor="#000000"
+                                        android:textSize="12sp"
+                                        app:layout_constraintStart_toEndOf="@+id/textHighlishComment7"
+                                        app:layout_constraintTop_toBottomOf="@+id/textArtistName7" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar1Box7"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar2Box7"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="visible"
+                                        app:layout_constraintEnd_toStartOf="@+id/iconStar1Box7"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar3Box7"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="visible"
+                                        app:layout_constraintEnd_toStartOf="@+id/iconStar2Box7"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar4Box7"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="visible"
+                                        app:layout_constraintEnd_toStartOf="@+id/iconStar3Box7"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                    <ImageView
+                                        android:id="@+id/iconStar5Box7"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="5dp"
+                                        android:tint="#FFC107"
+                                        android:visibility="visible"
+                                        app:layout_constraintEnd_toStartOf="@+id/iconStar4Box7"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </FrameLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

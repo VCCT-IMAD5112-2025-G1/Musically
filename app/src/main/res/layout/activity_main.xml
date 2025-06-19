@@ -65,15 +65,15 @@
             app:layout_constraintTop_toTopOf="@+id/closeButton"
             app:tint="#595757" />
 
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@drawable/baseline_close_24"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="5dp"
+            android:text="Add Your Song"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@+id/addPlaylistButton"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -124,7 +124,7 @@
             android:layout_width="365dp"
             android:layout_height="130dp"
             android:layout_marginTop="20dp"
-            android:text="Track your lovely playlist, and stay informed about changing conditions. Ready to explore?\n\nMade by: Mazen BaHamid | ST10486439"
+            android:text="This app is designed to help you manage your music collection and discover new tracks!\nMade by: Mazen BaHamid | ST10486439"
             android:textColor="#585858"
             android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
