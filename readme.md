@@ -83,7 +83,7 @@ The Musically App is designed to provide users with a comprehensive music playli
 #### **Handling Error**
 <table>
   <tr>
-    <td>Add Song Screen</td>
+    <td>Handling Errors If the User Ad Invalid Data</td>
   </tr>
   <tr>
     <td><img src="HandlingError.png" alt="Add Song Screen" width="300" style="border: 2px solid #ddd; padding: 5px; border-radius: 4px; display: block; margin-left: auto; margin-right: auto;"/></td>
@@ -93,7 +93,7 @@ The Musically App is designed to provide users with a comprehensive music playli
 #### **Display Avg**
 <table>
   <tr>
-    <td>Add Song Screen</td>
+    <td>Display Avg</td>
   </tr>
   <tr>
     <td><img src="Avg.png" alt="Add Song Screen" width="300" style="border: 2px solid #ddd; padding: 5px; border-radius: 4px; display: block; margin-left: auto; margin-right: auto;"/></td>
