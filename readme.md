@@ -25,7 +25,7 @@ This App is Made By Mazen Ba Hamid | ST10486439
 ### **🔗 GitHub Repository Link**
 
 The complete source code for this project is available on GitHub:
-[https://github.com/x0Mazen/Musically]https://github.com/x0Mazen/Musically)
+[https://github.com/x0Mazen/Musically](https://github.com/x0Mazen/Musically)
 
 ---
 
